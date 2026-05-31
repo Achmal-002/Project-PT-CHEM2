@@ -34,14 +34,14 @@ export const retailProducts: RetailProduct[] = [
     id: "isc-tango-tx2",
     name: "ISC-TANGO TX2",
     category: "gas-detector",
-    image: "/assets/equipment/isc-tango-tx2.png",
+    image: "/assets/equipment/isc-tango-tx2.webp",
     description: "Portable multi-gas detector with touchscreen display"
   },
   {
     id: "isc-radius-bz1",
     name: "ISC-RADIUS BZ1",
     category: "gas-detector",
-    image: "/assets/equipment/isc-radius-bz1.png",
+    image: "/assets/equipment/isc-radius-bz1.webp",
     description: "Wireless gas detection system"
   },
   {
@@ -62,7 +62,7 @@ export const retailProducts: RetailProduct[] = [
     id: "isc-ventis-pro5",
     name: "ISC-VENTIS PRO5",
     category: "gas-detector",
-    image: "/assets/equipment/isc-ventis-pro5.png",
+    image: "/assets/equipment/isc-ventis-pro5.webp",
     description: "Advanced 5-gas detector"
   },
   {

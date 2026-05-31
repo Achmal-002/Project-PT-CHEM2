@@ -174,13 +174,13 @@ export default function EquipmentRetailPage() {
           <div className="rounded-2xl border border-chem-blue/10 bg-gradient-to-br from-white via-[#fbfdff] to-[#f3f8ff] overflow-hidden">
             <div className="grid gap-8 lg:gap-12 lg:grid-cols-5 lg:items-center">
               {/* Left: Product Image */}
-              <div className="lg:col-span-2 relative h-64 md:h-80 bg-gradient-to-br from-chem-blue/10 to-chem-blue/5 flex items-center justify-center overflow-hidden">
+              <div className="lg:col-span-2 relative h-64 md:h-80 bg-gradient-to-br flex items-center justify-center overflow-hidden">
                 <Image
                   src={hydraulicPump.image}
                   alt={hydraulicPump.name}
-                  width={300}
-                  height={300}
-                  className="w-full h-full object-contain p-6 md:p-8"
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-contain p-5 md:p-1"
                   priority
                 />
               </div>
@@ -208,7 +208,7 @@ export default function EquipmentRetailPage() {
 
                 {/* Specifications Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  <div className="rounded-lg border border-chem-blue/10 bg-white p-4">
+                  <div className="rounded-lg border border-chem-blue/10 bg-white p-3">
                     <p className="text-xs font-semibold uppercase tracking-wider text-chem-blue/70 mb-1">
                       Max Supply Pressure
                     </p>
