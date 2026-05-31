@@ -78,9 +78,9 @@ export function Hero() {
                 transformOrigin: "center right"
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-[#091729]/28 via-[#0d1f35]/12 to-white/58" />
-            <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-white/90 via-white/55 to-transparent" />
-            <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-l from-[#091729]/12 via-[#0d1f35]/5 to-white/20" />
+            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white/40 via-white/20 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/10 to-transparent" />
             <div className="absolute left-6 top-6 rounded-2xl bg-white/90 px-4 py-3 shadow-[0_16px_40px_-24px_rgba(11,22,37,0.55)] backdrop-blur-sm">
               <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-chem-slate/55">Trusted Solutions</p>
               <p className="mt-1 text-sm font-semibold text-chem-slate">Environmental & Risk Advisory</p>
