@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-white">
-      <div className="absolute left-[18%] top-0 z-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-chem-yellow/20 blur-3xl" />
-      <div className="absolute right-[-4%] top-16 z-0 h-[360px] w-[360px] rounded-full bg-chem-green/20 blur-3xl" />
-      <div className="absolute inset-x-0 bottom-0 z-0 h-36 bg-gradient-to-t from-[#ecf6ef]/75 to-transparent" />
+    <section className="relative isolate overflow-hidden bg-gradient-to-br from-white via-[#f0fdf4] to-[#ecfdf5]">
+      <div className="absolute left-[18%] top-0 z-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-chem-yellow/30 blur-3xl" />
+      <div className="absolute right-[-4%] top-16 z-0 h-[360px] w-[360px] rounded-full bg-chem-green/35 blur-3xl" />
+      <div className="absolute inset-x-0 bottom-0 z-0 h-48 bg-gradient-to-t from-chem-green/10 via-chem-green/5 to-transparent" />
 
       <div className="pointer-events-none absolute inset-y-0 left-[-2%] hidden z-0 items-center lg:flex">
         <div
@@ -36,8 +36,8 @@ export function Hero() {
             Environmental, Oil & Gas, Industrial Solutions
           </span>
 
-          <h1 className="max-w-3xl text-[2.05rem] font-semibold text-chem-slate sm:text-5xl lg:text-[3.45rem]">
-            Solusi Inovatif & Berkelanjutan di Bidang Lingkungan dan Migas
+          <h1 className="max-w-3xl text-[2.05rem] font-bold text-chem-slate sm:text-5xl lg:text-[3.45rem]">
+            Solusi Inovatif &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-chem-green to-emerald-600">Berkelanjutan</span> di Bidang <span className="text-chem-green">Lingkungan</span> dan Migas
           </h1>
 
           <p className="max-w-2xl text-[1.02rem] leading-8 text-chem-slate/76 sm:text-lg">
@@ -49,13 +49,13 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a
               href="/services"
-              className="rounded-full bg-chem-blue px-7 py-3 text-sm font-semibold text-white shadow-glow transition-all hover:-translate-y-0.5 hover:shadow-[0_22px_44px_-16px_rgba(15,79,168,0.42)]"
+              className="rounded-full bg-chem-green px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-chem-green/30 transition-all hover:shadow-xl hover:shadow-chem-green/40 hover:-translate-y-0.5 hover:bg-emerald-700"
             >
               Jelajahi Layanan
             </a>
             <a
               href="/training"
-              className="rounded-full border border-chem-blue/25 bg-white px-7 py-3 text-sm font-semibold text-chem-blue transition-colors hover:border-chem-green hover:text-chem-green"
+              className="rounded-full border-2 border-chem-yellow bg-white px-7 py-3.5 text-sm font-bold text-chem-green transition-all hover:bg-chem-yellow/10 hover:shadow-md hover:shadow-chem-yellow/30"
             >
               Program Pelatihan
             </a>

@@ -53,15 +53,15 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300 border-t-4 border-chem-green",
         isScrolled
-          ? "bg-white/75 backdrop-blur-xl shadow-[0_8px_30px_rgba(11,22,37,0.08)]"
+          ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-chem-green/10"
           : "bg-transparent"
       )}
     >
       <nav className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-5">
-        <Link href="/" className="flex items-center gap-3 text-sm font-semibold tracking-[0.18em] text-chem-blue">
-          <span className="relative h-10 w-10 overflow-hidden rounded-full border border-chem-blue/20 bg-white/85 shadow-[0_8px_18px_-12px_rgba(11,22,37,0.45)]">
+        <Link href="/" className="flex items-center gap-3 text-sm font-bold tracking-[0.18em] text-chem-green">
+          <span className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-chem-green bg-white/85 shadow-[0_8px_18px_-12px_rgba(9,179,107,0.45)]">
             <Image
               src="/assets/logo/logo.png"
               alt="Logo PT Chem Energy Semesta"
@@ -81,7 +81,7 @@ export function Navbar() {
               {!('children' in item) ? (
                 <Link
                   href={item.href}
-                  className="text-sm font-medium text-chem-slate/80 transition-colors hover:text-chem-green"
+                  className="text-sm font-semibold text-chem-slate transition-colors hover:text-chem-green"
                 >
                   {item.label}
                 </Link>
@@ -90,7 +90,7 @@ export function Navbar() {
                   <button
                     type="button"
                     onClick={() => setIsServicesOpen((prev) => !prev)}
-                    className="inline-flex items-center gap-1 text-sm font-medium text-chem-slate/80 transition-colors hover:text-chem-green"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-chem-slate transition-colors hover:text-chem-green"
                     aria-expanded={isServicesOpen}
                     aria-haspopup="menu"
                   >
@@ -115,7 +115,7 @@ export function Navbar() {
 
                   <div
                     className={cn(
-                      "absolute left-0 top-full mt-3 w-72 rounded-2xl border border-chem-blue/10 bg-white/95 p-3 shadow-lg backdrop-blur-xl transition-all duration-200",
+                      "absolute left-0 top-full mt-3 w-72 rounded-2xl border-2 border-chem-green bg-white/95 p-3 shadow-lg backdrop-blur-xl transition-all duration-200",
                       isServicesOpen
                         ? "pointer-events-auto translate-y-0 opacity-100"
                         : "pointer-events-none -translate-y-1 opacity-0"
@@ -128,7 +128,7 @@ export function Navbar() {
                           key={c.href}
                           href={c.href}
                           onClick={() => setIsServicesOpen(false)}
-                          className="rounded-xl px-3 py-2 text-sm font-medium text-chem-slate/80 transition-colors hover:bg-chem-blue/5 hover:text-chem-blue"
+                          className="rounded-xl px-3 py-2 text-sm font-medium text-chem-slate/85 transition-colors hover:bg-chem-green/10 hover:text-chem-green"
                         >
                           {c.label}
                         </Link>
@@ -146,7 +146,7 @@ export function Navbar() {
           aria-expanded={isMobileMenuOpen}
           aria-label="Toggle menu"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-chem-blue/20 bg-white/70 text-chem-blue md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-chem-green bg-white/80 text-chem-green hover:bg-chem-green/5 md:hidden"
         >
           <span className="sr-only">Menu</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
