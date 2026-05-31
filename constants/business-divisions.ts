@@ -3,7 +3,7 @@ export const businessDivisions = [
     key: "process-safety",
     label: "Process Safety and Engineering",
     partner: "HAZOPS & HAZID",
-    href: "/services#process-safety",
+    href: "/services/process-safety",
     eyebrow: "Process Safety",
     summary:
       "Kajian keselamatan proses, fasilitasi HAZOP/HAZID, dan engineering advisory untuk membantu operasi industri tetap aman dan terkendali.",
@@ -13,7 +13,7 @@ export const businessDivisions = [
     key: "environmental",
     label: "Environmental",
     partner: "PROPER",
-    href: "/services#environmental",
+    href: "/services/environmental",
     eyebrow: "Environmental",
     summary:
       "Konsultasi kepatuhan lingkungan dan peningkatan performa PROPER dengan pendekatan yang terukur dan mudah diimplementasikan.",
@@ -23,7 +23,7 @@ export const businessDivisions = [
     key: "equipment-retail",
     label: "Equipment and Retail",
     partner: "Honeywell",
-    href: "/retail",
+    href: "/services/equipment-retail",
     eyebrow: "Equipment & Retail",
     summary:
       "Pengadaan gas detector dan peralatan industri dari brand tepercaya dengan dukungan layanan purna jual dan maintenance.",
@@ -33,7 +33,7 @@ export const businessDivisions = [
     key: "training",
     label: "Training",
     partner: "LSP",
-    href: "/training",
+    href: "/services/training",
     eyebrow: "Training",
     summary:
       "Program pelatihan dan sertifikasi untuk memperkuat kompetensi keselamatan kerja, keselamatan proses, dan lingkungan.",

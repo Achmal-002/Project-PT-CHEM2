@@ -49,7 +49,7 @@ export default function ServicesPage() {
                 href={division.href}
                 className="rounded-full border border-chem-blue/20 bg-white px-5 py-2.5 text-sm font-semibold text-chem-blue transition-colors hover:border-chem-green hover:text-chem-green"
               >
-                {division.href.startsWith("/services") ? "Scroll detail" : "Buka halaman"}
+                Buka halaman
               </Link>
             </div>
 
@@ -66,22 +66,20 @@ export default function ServicesPage() {
               ))}
             </ul>
 
-            {division.href.startsWith("/services") ? (
-              <div className="mt-5 flex flex-wrap gap-3">
-                <Link
-                  href="/contact"
-                  className="rounded-full bg-chem-blue px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
-                >
-                  Konsultasi
-                </Link>
-                <Link
-                  href="/about"
-                  className="rounded-full border border-chem-blue/20 bg-white px-5 py-2.5 text-sm font-semibold text-chem-blue transition-colors hover:border-chem-green hover:text-chem-green"
-                >
-                  Tentang Kami
-                </Link>
-              </div>
-            ) : null}
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="rounded-full bg-chem-blue px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+              >
+                Konsultasi
+              </Link>
+              <Link
+                href="/about"
+                className="rounded-full border border-chem-blue/20 bg-white px-5 py-2.5 text-sm font-semibold text-chem-blue transition-colors hover:border-chem-green hover:text-chem-green"
+              >
+                Tentang Kami
+              </Link>
+            </div>
           </article>
         ))}
       </section>
