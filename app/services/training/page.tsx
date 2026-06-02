@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { trainingServices } from "@/constants/services";
 
 export const metadata = {
@@ -103,18 +104,30 @@ export default function TrainingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {trainingServices.programs.safety.trainings.map((training, idx) => (
-              <div
-                key={idx}
-                className="rounded-lg border border-chem-blue/10 bg-white px-5 py-4 hover:shadow-md hover:border-chem-blue/30 transition-all flex items-start gap-3"
-              >
-                <span className="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-chem-blue/20 text-chem-blue text-xs font-bold">
-                  ✓
-                </span>
-                <span className="text-sm font-medium text-chem-slate">{training}</span>
-              </div>
-            ))}
+          {/* Training Content with Image */}
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+              {trainingServices.programs.safety.trainings.map((training, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-lg border border-chem-blue/10 bg-white px-5 py-4 hover:shadow-md hover:border-chem-blue/30 transition-all flex items-start gap-3"
+                >
+                  <span className="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-chem-blue/20 text-chem-blue text-xs font-bold">
+                    ✓
+                  </span>
+                  <span className="text-sm font-medium text-chem-slate">{training}</span>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-300">
+              <Image
+                src="/assets/training-photo/classroom-training-session.jpeg"
+                alt="Classroom Training Session"
+                width={500}
+                height={400}
+                className="object-cover w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -137,22 +150,34 @@ export default function TrainingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {trainingServices.programs.processSafety.trainings.map(
-              (training, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-lg border border-chem-green/10 bg-gradient-to-br from-white to-chem-green/3 px-5 py-4 hover:shadow-md hover:border-chem-green/30 transition-all flex items-start gap-3"
-                >
-                  <span className="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-chem-green/20 text-chem-green text-xs font-bold">
-                    ⚡
-                  </span>
-                  <span className="text-sm font-medium text-chem-slate">
-                    {training}
-                  </span>
-                </div>
-              )
-            )}
+          {/* Training Content with Image */}
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+            <div className="rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-300">
+              <Image
+                src="/assets/training-photo/training-participants-group.jpeg"
+                alt="Training Participants Group"
+                width={500}
+                height={400}
+                className="object-cover w-full"
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+              {trainingServices.programs.processSafety.trainings.map(
+                (training, idx) => (
+                  <div
+                    key={idx}
+                    className="rounded-lg border border-chem-green/10 bg-gradient-to-br from-white to-chem-green/3 px-5 py-4 hover:shadow-md hover:border-chem-green/30 transition-all flex items-start gap-3"
+                  >
+                    <span className="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-chem-green/20 text-chem-green text-xs font-bold">
+                      ⚡
+                    </span>
+                    <span className="text-sm font-medium text-chem-slate">
+                      {training}
+                    </span>
+                  </div>
+                )
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -175,22 +200,34 @@ export default function TrainingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {trainingServices.programs.environmental.trainings.map(
-              (training, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-lg border border-chem-green/10 bg-white px-5 py-4 hover:shadow-md hover:border-chem-green/30 transition-all flex items-start gap-3"
-                >
-                  <span className="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-chem-green/20 text-chem-green text-xs font-bold">
-                    🌱
-                  </span>
-                  <span className="text-sm font-medium text-chem-slate">
-                    {training}
-                  </span>
-                </div>
-              )
-            )}
+          {/* Training Content with Image */}
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+              {trainingServices.programs.environmental.trainings.map(
+                (training, idx) => (
+                  <div
+                    key={idx}
+                    className="rounded-lg border border-chem-green/10 bg-white px-5 py-4 hover:shadow-md hover:border-chem-green/30 transition-all flex items-start gap-3"
+                  >
+                    <span className="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-chem-green/20 text-chem-green text-xs font-bold">
+                      🌱
+                    </span>
+                    <span className="text-sm font-medium text-chem-slate">
+                      {training}
+                    </span>
+                  </div>
+                )
+              )}
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-300">
+              <Image
+                src="/assets/training-photo/classroom-training-session.jpeg"
+                alt="Security Training"
+                width={500}
+                height={400}
+                className="object-cover w-full"
+              />
+            </div>
           </div>
         </div>
       </section>

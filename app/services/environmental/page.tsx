@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { environmentalServices } from "@/constants/services";
 
 export const metadata = {
@@ -174,48 +175,65 @@ export default function EnvironmentalPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {environmentalServices.details.monitoring.scopes.map(
-              (scope, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-2xl border border-chem-green/10 bg-gradient-to-br from-white via-[#fbfdff] to-[#f0fdf4] p-8 hover:shadow-lg hover:border-chem-green/30 transition-all"
-                >
-                  <h3 className="text-lg font-bold text-chem-slate mb-4 flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-chem-green"></span>
-                    {scope.category}
-                  </h3>
-                  <ul className="space-y-3">
-                    {scope.items.map((item, itemIdx) => (
-                      <li
-                        key={itemIdx}
-                        className="flex items-start gap-3 text-chem-slate/80"
-                      >
-                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-chem-green/60 shrink-0"></span>
-                        <span className="text-sm leading-5">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )
-            )}
-          </div>
+          {/* Monitoring Content with Images */}
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start mb-12">
+            {/* Text Content */}
+            <div className="space-y-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                {environmentalServices.details.monitoring.scopes.map(
+                  (scope, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-2xl border border-chem-green/10 bg-gradient-to-br from-white via-[#fbfdff] to-[#f0fdf4] p-8 hover:shadow-lg hover:border-chem-green/30 transition-all"
+                    >
+                      <h3 className="text-lg font-bold text-chem-slate mb-4 flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-chem-green"></span>
+                        {scope.category}
+                      </h3>
+                      <ul className="space-y-3">
+                        {scope.items.map((item, itemIdx) => (
+                          <li
+                            key={itemIdx}
+                            className="flex items-start gap-3 text-chem-slate/80"
+                          >
+                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-chem-green/60 shrink-0"></span>
+                            <span className="text-sm leading-5">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                )}
+              </div>
 
-          <div className="mt-10 rounded-2xl border border-chem-green/20 bg-gradient-to-br from-chem-green/10 to-chem-green/5 p-8">
-            <h3 className="text-lg font-bold text-chem-slate mb-4">
-              Manfaat Monitoring Lingkungan
-            </h3>
-            <div className="grid gap-4 md:grid-cols-2">
-              {environmentalServices.details.monitoring.benefits.map(
-                (benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-chem-green shrink-0"></span>
-                    <span className="text-sm text-chem-slate/80 leading-6">
-                      {benefit}
-                    </span>
-                  </div>
-                )
-              )}
+              <div className="rounded-2xl border border-chem-green/20 bg-gradient-to-br from-chem-green/10 to-chem-green/5 p-8">
+                <h3 className="text-lg font-bold text-chem-slate mb-4">
+                  Manfaat Monitoring Lingkungan
+                </h3>
+                <div className="grid gap-4 md:grid-cols-2">
+                  {environmentalServices.details.monitoring.benefits.map(
+                    (benefit, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <span className="mt-1 h-2 w-2 rounded-full bg-chem-green shrink-0"></span>
+                        <span className="text-sm text-chem-slate/80 leading-6">
+                          {benefit}
+                        </span>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-300">
+              <Image
+                src="/assets/env-photo/participants-env.jpeg"
+                alt="Jasa Lingkungan Pemantauan PT Chem Energy Semesta"
+                width={500}
+                height={400}
+                className="object-cover w-full"
+              />
             </div>
           </div>
         </div>
@@ -240,36 +258,53 @@ export default function EnvironmentalPage() {
               {environmentalServices.details.noiseStudy.description}
             </p>
 
-            <div className="grid gap-6 md:grid-cols-3">
-              {[
-                {
-                  title: "Pengukuran Akurat",
-                  description:
-                    "Menggunakan peralatan kalibrasi standar internasional"
-                },
-                {
-                  title: "Analisis Mendalam",
-                  description:
-                    "Identifikasi sumber kebisingan dan dampaknya terhadap K3"
-                },
-                {
-                  title: "Rekomendasi Praktis",
-                  description:
-                    "Solusi teknik dan administratif untuk pengendalian kebisingan"
-                }
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-xl border border-chem-green/10 bg-gradient-to-br from-chem-green/5 to-white p-6"
-                >
-                  <h3 className="font-bold text-chem-slate mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-chem-slate/70">
-                    {item.description}
-                  </p>
+            {/* Noise Study Content with Image */}
+            <div className="grid gap-12 md:grid-cols-2 md:items-center mb-12">
+              {/* Image on Left */}
+              <div className="rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-300 order-2 md:order-1">
+                <Image
+                  src="/assets/env-photo/noise-study.jpeg"
+                  alt="Jasa Noise Study PT Chem Energy Semesta"
+                  width={500}
+                  height={400}
+                  className="object-cover w-full"
+                />
+              </div>
+
+              {/* Text Content on Right */}
+              <div className="order-1 md:order-2">
+                <div className="grid gap-6 md:grid-cols-1">
+                  {[
+                    {
+                      title: "Pengukuran Akurat",
+                      description:
+                        "Menggunakan peralatan kalibrasi standar internasional"
+                    },
+                    {
+                      title: "Analisis Mendalam",
+                      description:
+                        "Identifikasi sumber kebisingan dan dampaknya terhadap K3"
+                    },
+                    {
+                      title: "Rekomendasi Praktis",
+                      description:
+                        "Solusi teknik dan administratif untuk pengendalian kebisingan"
+                    }
+                  ].map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-xl border border-chem-green/10 bg-gradient-to-br from-chem-green/5 to-white p-6"
+                    >
+                      <h3 className="font-bold text-chem-slate mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-chem-slate/70">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>

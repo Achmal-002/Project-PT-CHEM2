@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { processSafetyServices } from "@/constants/services";
 
 export const metadata = {
@@ -140,7 +141,7 @@ export default function ProcessSafetyPage() {
               </div>
 
               {/* Benefits */}
-              <div className="rounded-2xl border border-chem-green/20 bg-gradient-to-br from-chem-green/10 to-chem-green/5 p-8">
+              <div className="rounded-2xl border border-chem-green/20 bg-gradient-to-br from-chem-green/10 to-chem-green/5 p-8 mb-10">
                 <h3 className="text-xl font-bold text-chem-slate mb-6">
                   Manfaat Layanan
                 </h3>
@@ -158,6 +159,95 @@ export default function ProcessSafetyPage() {
                   )}
                 </ul>
               </div>
+
+              {/* Featured Image */}
+              <div className="rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-300">
+                <Image
+                  src="/assets/ss-photo/hazop-hazid.jpg"
+                  alt="Process Safety Inspection"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services Section with Images */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-chem-blue/5 to-transparent">
+        <div className="mx-auto w-full max-w-6xl px-5">
+          <h2 className="text-3xl md:text-4xl font-bold text-chem-slate mb-12">
+            Layanan Tambahan
+          </h2>
+
+          {/* Fire Protection Engineering */}
+          <div className="mb-16 grid gap-12 lg:grid-cols-2 lg:items-start">
+            <div className="order-2 lg:order-1">
+              <Image
+                src="/assets/ss-photo/fire-protection-engineering.jpeg"
+                alt="Fire Protection Engineering"
+                width={500}
+                height={400}
+                className="rounded-2xl shadow-md object-cover w-full hover:scale-[1.02] transition-transform duration-300"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h3 className="text-2xl font-bold text-chem-slate mb-4">
+                Sistem Proteksi Kebakaran
+              </h3>
+              <p className="text-base leading-7 text-chem-slate/75 mb-6">
+                Desain dan analisis sistem proteksi kebakaran untuk fasilitas industri dengan standar internasional.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Perencanaan sistem sprinkle dan hydrant",
+                  "Analisis fire separation dan compartmentalization",
+                  "Rekomendasi perlengkapan proteksi aktif dan pasif",
+                  "Compliance dengan standar NFPA dan FM Global"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-chem-slate/80">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-chem-green shrink-0"></span>
+                    <span className="text-sm leading-5">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Technical Site Survey */}
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+            <div>
+              <h3 className="text-2xl font-bold text-chem-slate mb-4">
+                Survei Teknis Lapangan
+              </h3>
+              <p className="text-base leading-7 text-chem-slate/75 mb-6">
+                Inspeksi menyeluruh terhadap kondisi teknis, identifikasi gap keselamatan, dan rekomendasi perbaikan.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Inspeksi pressure vessel dan piping systems",
+                  "Evaluasi sistem instrumentasi dan kontrol",
+                  "Penilaian human factors dan prosedur operasi",
+                  "Dokumentasi findings dan action plan",
+                  "Follow-up monitoring implementasi"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-chem-slate/80">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-chem-blue shrink-0"></span>
+                    <span className="text-sm leading-5">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <Image
+                src="/assets/ss-photo/technical-site-survey.jpg"
+                alt="Technical Site Survey"
+                width={500}
+                height={400}
+                className="rounded-2xl shadow-md object-cover w-full hover:scale-[1.02] transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
