@@ -1,16 +1,22 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { trainingGroups } from "@/constants/training-detail";
 import { useReducedMotion } from "framer-motion";
 
 export function TrainingShowcase() {
+  const [isMounted, setIsMounted] = useState(false);
   const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <motion.section
       id="training-overview"
-      initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 28 }}
+      initial={isMounted && !reducedMotion ? { opacity: 0, y: 28 } : { opacity: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

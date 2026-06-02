@@ -7,10 +7,15 @@ import { partners } from "@/constants/partners";
 export function PartnerSlider() {
   const x = useMotionValue(0);
   const trackRef = useRef<HTMLDivElement | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
   const [loopWidth, setLoopWidth] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const reducedMotion = useReducedMotion();
   const slideItems = useMemo(() => [...partners, ...partners], []);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const measure = () => {
@@ -44,7 +49,7 @@ export function PartnerSlider() {
   return (
     <motion.section
       id="partners-overview"
-      initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 28 }}
+      initial={isMounted && !reducedMotion ? { opacity: 0, y: 28 } : { opacity: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

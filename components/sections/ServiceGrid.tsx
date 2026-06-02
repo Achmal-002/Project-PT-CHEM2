@@ -1,16 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { businessDivisions } from "@/constants/business-divisions";
 
 export function ServiceGrid() {
+  const [isMounted, setIsMounted] = useState(false);
   const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <motion.section
       id="business-divisions"
-      initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 28 }}
+      initial={isMounted && !reducedMotion ? { opacity: 0, y: 28 } : { opacity: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
