@@ -10,14 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         chem: {
-          green: "#18a558",
-          blue: "#0f4fa8",
-          yellow: "#f5bf2f",
-          slate: "#0b1625"
+          green: "#09B36B",
+          yellow: "#F4A633",
+          slate: "#111827",
+          blue: "#0f4fa8"
         }
       },
       boxShadow: {
-        glow: "0 20px 45px -15px rgba(15, 79, 168, 0.35)"
+        glow: "0 20px 45px -15px rgba(9, 179, 107, 0.4)",
+        "glow-yellow": "0 20px 45px -15px rgba(244, 166, 51, 0.35)",
+        "bold": "0 10px 30px -8px rgba(9, 179, 107, 0.3)"
+      },
+      backgroundImage: {
+        "gradient-bold": "linear-gradient(135deg, #09B36B 0%, #06933a 100%)"
       }
     }
   },
