@@ -169,12 +169,24 @@ export function Navbar() {
         </button>
       </nav>
 
+      {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "border-t border-chem-blue/10 bg-white/95 backdrop-blur-xl transition-all duration-300 md:hidden",
+          "fixed inset-0 w-full h-screen z-40 bg-white/20 backdrop-blur-sm transition-opacity duration-300 md:hidden",
           isMobileMenuOpen
-            ? "max-h-[260px] opacity-100"
-            : "pointer-events-none max-h-0 opacity-0"
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
+        )}
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+
+      {/* Mobile Menu Content */}
+      <div
+        className={cn(
+          "fixed top-20 left-0 right-0 w-full bg-white border-t border-chem-blue/10 overflow-y-auto z-50 transition-all duration-300 md:hidden",
+          isMobileMenuOpen
+            ? "max-h-[calc(100vh-80px)] opacity-100 pointer-events-auto"
+            : "max-h-0 opacity-0 pointer-events-none"
         )}
       >
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-5 py-4">
@@ -215,7 +227,7 @@ export function Navbar() {
                     </svg>
                   </button>
 
-                  <div className={cn("ml-3 mt-1 flex flex-col overflow-hidden transition-all duration-200", isServicesOpen ? "max-h-64" : "max-h-0") }>
+                  <div className={cn("ml-3 mt-1 flex flex-col overflow-hidden transition-all duration-200", isServicesOpen ? "max-h-96" : "max-h-0") }>
                     {(item as any).children.map((c: any) => (
                       <Link
                         key={c.href}
